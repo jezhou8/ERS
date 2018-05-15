@@ -4,7 +4,7 @@
  * the card's methods have been defined to support the implmentation
  * of a blackjack game.
  * 
- * @author David Gumminger
+ * @author Jerry Zhou
  * @version March 2018
  */
 public class Card
