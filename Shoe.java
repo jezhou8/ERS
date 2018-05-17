@@ -65,7 +65,6 @@ public class Shoe
         {
             Card c = usedCards.remove(0);
             // set the card back to a value of 11 if it's an Ace
-            c.setAceToOne(false);
             theShoe.add(c);
         }
         /* widely accepted that a good mix on a deck of cards 

@@ -28,52 +28,52 @@ public class Card
     {
         int temp1 = card % 4;
         if (temp1 == 0)
-            suit = " of Hearts";
+            suit = "H";
         else if (temp1 == 1)
-            suit = " of Spades";
+            suit = "S";
         else if (temp1 == 2)
-            suit = " of Diamonds";
+            suit = "D";
         else
-            suit = " of Clubs";
+            suit = "C";
         temp1 = (card / 4) % 13;
         if (temp1 == 0){
-            rank = "Ace";
+            rank = "A";
             value = 14;}
         else if (temp1 == 1){
-            rank = "Two";
+            rank = "2";
             value = 2;}
         else if (temp1 == 2){
-            rank = "Three";
+            rank = "3";
             value = 3;}
         else if (temp1 == 3){
-            rank = "Four";
+            rank = "4";
             value = 4;}
         else if (temp1 == 4){
-            rank = "Five";
+            rank = "5";
             value = 5;}
         else if (temp1 == 5){
-            rank = "Six";
+            rank = "6";
             value = 6;}
         else if (temp1 == 6){
-            rank = "Seven";
+            rank = "7";
             value = 7;}
         else if (temp1 == 7){
-            rank = "Eight";
+            rank = "8";
             value = 8;}
         else if (temp1 == 8){
-            rank = "Nine";
+            rank = "9";
             value = 9;}
         else if (temp1 == 9){
-            rank = "Ten";
+            rank = "10";
             value = 10;}
         else if (temp1 == 10){
-            rank = "Jack";
+            rank = "J";
             value = 11;}
         else if (temp1 == 11){
-            rank = "Queen";
+            rank = "Q";
             value = 12;}
         else{
-            rank = "King";
+            rank = "K";
             value = 13;}
     }
     /**
@@ -94,7 +94,7 @@ public class Card
      */
     public String toString()
     {
-        return rank+suit;  
+        return value+suit;  
     }
     /**
      * Get the cards value for a game of Blackjack
@@ -112,19 +112,4 @@ public class Card
         return rank;
     }    
     
-    /**
-     * Changes an ace's value from 11 points to 1 or 1 to 11
-     * @param setToOne - True if the card should be changed to
-     *   a value of one. False to change the value back to 11
-     * @author David Gumminger
-     * @version March 2018  
-     */
-    public void setAceToOne(boolean setToOne)
-    {
-        if(isAce())
-           if(setToOne)
-                value = 1;
-           else
-                value = 11;
-    }
 }
